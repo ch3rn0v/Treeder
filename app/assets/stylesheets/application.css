@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
 */
+body {
+  padding-left:300px; 
+  width:600px;
+  
+  font-family: 'Cuprum', sans-serif;
+}
+
+input,
+textarea {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;  
+}

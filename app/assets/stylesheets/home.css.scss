@@ -2,21 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1 {
+  font-size:40px;
+}
+
+#site_description {
+  font-size:30px;
+}
+
 $box-width: 400px;
 $box-height: 200px;
 
+
 #user-input {
-	width: $box-width; 
-	height: $box-height;
+  width: $box-width; 
+  height: $box-height;
+  
+  margin-top:45px;
+  padding:30px;
 }
 
 #processing-result {
-	 width: $box-width; 
-	 height: $box-height; 
-	 background-color: #F7F7F7; 
-	 margin-top:10px;
+   width:$box-width; 
+   height:$box-height / 2;
+   
+   padding:30px;   
+   margin-top:-($box-height / 2 + 110px);
+   margin-bottom:($box-height / 2);
+   border:2px solid black;      
+   background-color: #F7F7F7;
+
+   text-align:center;   
+   font-size:50px;
 }
 
-#btn{
-	display: block;
+input[type="button"] {
+	height:40px;
+	
+	padding-left:15px;
+	padding-right:15px;	
+	display:inline;
+	
+	text-align:center;
 }

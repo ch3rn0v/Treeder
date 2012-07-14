@@ -5,10 +5,11 @@ $(function(){
         //каждый из них можно было отдельно анимировать со своим timeout
 		var content = $("textarea").remove_spaces().split(" ").add_tags("<span class='show_word'>", "</span>")
         var output_block = $("#processing-result")
-		output_block.html(content)
+        
+        //Прячем всё содержимое, и последовательно отображаем слова с задержкой 100 
+		output_block.html(content).children().hide()
         output_block.children().each(function(i){
-            $(this).hide()
-            $(this).delay(100 * i).fadeIn()
+             $(this).delay(100 * i).fadeIn()
         })
 	})
 

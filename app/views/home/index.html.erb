@@ -2,20 +2,7 @@
 <p>This is all about reading fast. Just paste your text in the box below and press the "Go" button.</p>
 <div> button goes here</div>
 
-<textarea style="width:400px; height: 200px;"> qwe</textarea><div style=" width:400px; height: 200px; background-color: #F7F7F7; margin-top:10px" id="result"> <span>sdf</span></div>
-<input id="btn" type="button" style="display:block;" value="go">
-
-<script>
-$(function(){
-	$("#btn").click(function(){
-		var text = $("textarea").val()
-		$("#result").html(text)
-	})
-
-
-
-});
-
-
-</script>
+<textarea id="user-input"> </textarea>
+<div id="processing-result" ></div>
+<input id="btn" type="button" value="go">
 

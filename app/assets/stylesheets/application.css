@@ -13,15 +13,21 @@
 */
 body {
   padding-left:300px; 
-  width:600px;
+  width:650px;
   
   font-family: 'Cuprum', sans-serif;
 }
 
+/*#header {
+  background-color: #F7F7F7;
+}*/
+
+#header,
 #footer {
   margin-top: 50px;
-  border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
+  /*border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;*/
+  border: 1px solid #999999;
   background-color: #F7F7F7;
   padding: 3px 15px 30px;
 }

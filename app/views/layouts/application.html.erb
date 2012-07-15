@@ -11,6 +11,14 @@
 </head>
 <body>
 
+<div id="header">
+  <h1><%= t :title %></h1>
+  <% if notice %>
+  <p id="notice"><%= notice %></p>
+  <% end %>
+  <div id="site_description"><%= t :site_descr %></div>
+</div>
+
 <%= yield %>
 
 <div id="footer">

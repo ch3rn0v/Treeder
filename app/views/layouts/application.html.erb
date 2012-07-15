@@ -13,5 +13,18 @@
 
 <%= yield %>
 
+<div id="footer">
+  <p>Treeder © 2012</p>
+  <div id="language_switcher">
+  <p>Choose your language</p>
+  <%= form_tag home_path, :class => 'locale' do %>
+    <%= select_tag 'set_locale',
+     options_for_select(LANGUAGES, I18n.locale.to_s),
+     :onchange => 'this.form.submit()' %>
+    <%= submit_tag 'Submit' %>
+    <%= javascript_tag "$('.locale input').hide()" %>  
+  <% end %>
+</div>
+
 </body>
 </html>

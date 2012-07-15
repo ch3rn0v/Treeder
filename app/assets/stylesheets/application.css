@@ -18,8 +18,23 @@ body {
   font-family: 'Cuprum', sans-serif;
 }
 
+#footer {
+  margin-top: 50px;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  background-color: #F7F7F7;
+  padding: 3px 15px 30px;
+}
 input,
 textarea {
   font-family: 'Cuprum', sans-serif;
   font-size: 20px;  
+}
+
+
+#language_switcher p {
+  display:inline;
+}
+.locale {
+ display:inline;
 }

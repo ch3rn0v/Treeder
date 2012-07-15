@@ -6,13 +6,13 @@ h1 {
   font-size:40px;
 }
 
-#site_description {
-  font-size:30px;
-}
-
 $box-width: 400px;
 $box-height: 200px;
 
+#site_description {
+  font-size:30px;
+  width: $box-width + 120px;
+}
 
 #user-input {
   width: $box-width; 

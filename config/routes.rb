@@ -1,7 +1,11 @@
 Treeder::Application.routes.draw do
   get "home/index"
 
-  match '/' => 'home#index'
+  scope '(:locale)' do
+    match '/' => 'home#index'
+    #resources :users
+    root :to => 'home#index', :as => 'home'
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

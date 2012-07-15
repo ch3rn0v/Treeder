@@ -1,7 +1,10 @@
-<h1>Welcome to Treeder!</h1>
-<div id="site_description">This is all about reading fast. Just paste your text in the box below and press the "Go" button.</div>
+<h1><%= t :title %></h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<div id="site_description"><%= t :site_descr %></div>
 
-<textarea id="user-input">This is a sample text to read fast. In order to read faster than usual press the "Start reading fast" button below and watch at the greybox area.</textarea>
+<textarea id="user-input"><%= t :sample_text %></textarea>
 <div id="processing-result"></div>
-<input id="btn" type="button" value="Start reading fast">
-<input id="btn_reset" type="button" value="Enter new text">
+<input id="btn" type="button" value="<%= t :btn_rd %>">
+<input id="btn_reset" type="button" value="<%= t :btn_rld %>">

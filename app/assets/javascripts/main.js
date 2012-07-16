@@ -1,6 +1,6 @@
 
      //global variables
-     globals = {
+     var globals = {
         threads: [],
         clearThreads: function() {
           for(var i = 0; i < this.threads.length; i++)

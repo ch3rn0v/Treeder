@@ -20,6 +20,12 @@ $box-height: 200px;
   padding: 10px;
 }
 
+#wrapper {
+  width: 950px;
+  margin: 0 auto;
+
+}
+
 #processing-result {
    /*width: $box-width;*/ 
    height: $box-height / 2;
@@ -36,7 +42,7 @@ $box-height: 200px;
 
 input[type="button"] {
 	height: 50px;
-	
+	width: 185px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-right: 15px;

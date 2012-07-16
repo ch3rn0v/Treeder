@@ -12,68 +12,6 @@
  *= require_tree .
  *= require jquery.ui.all
 */
-h1, h2 {  
-  margin: 0 0 7px;
-}
-h3 {
-  margin: 5px 0 3px;
-}
-body {
-  padding-left:300px; 
-  width:950px;
-
-  font-family: 'Cuprum', sans-serif;
-}
-
-#service_messages {
-  margin-top: 10px;
-}
-
-#main {
-  height:450px;
-}
-
-#left_side {
-  width: 200px;
-  float: left;
-}
-
-#account,
-#achievements {
-  background-color: #faf7a8;
-  border: 1px solid #e3e095;
-  margin: 20px 10px 20px 0;
-  padding: 10px 10px 10px 10px;
-}
-
-#main_container {
-  width: 700px;
-  margin: 20px 0 10px 0;
-  padding: 10px 10px 40px 10px;
-  float: right;  
-  background-color: #bceda0;
-  border: 1px solid #97c17f;
-}
-
-#header,
-#footer {
-  margin-top: 30px;
-  /*border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;*/
-  border: 1px solid #cdccfe;
-  background-color: #dbdaff;
-  padding: 15px 15px 30px;
-}
-input,
-textarea {
-  font-family: 'Cuprum', sans-serif;
-  font-size: 20px;  
-}
 
 
-#language_switcher p {
-  display:inline;
-}
-.locale {
-  display:inline;
-}
+

@@ -5,22 +5,18 @@ $(function(){
     
     $("#btn").click(function(){
 
-
       globals.clearThreads()
-      // $.each(globals.threads, function(i, v){
-      // window.clearTimeout(v);
-      // })
 
       if($(this).hasClass('active-btn'))
       {
         usr_inpt.style.visibility = 'visible'
         rslt.style.visibility = 'hidden'
-        $(this).val('Start reading fast').removeClass('active-btn')
+        $(this).val($(this).attr('btnstart')).removeClass('active-btn')
       }
       else
       {
 
-        $(this).val('Stop').addClass('active-btn')
+        $(this).val($(this).attr('btnstop')).addClass('active-btn')
         //удаляем лишние пробелы из текста, и обромляем каждое слово тэгом, чтобы потом 
         //каждый из них можно было отдельно анимировать со своим timeout
         var content = $("textarea").remove_spaces().split(" ")
@@ -57,25 +53,6 @@ $(function(){
 
       }
     })
-   
-   // $('.active-btn').live('click', function(){
-   //  $.each(globals.threads, function(i, v){
-   //    window.clearTimeout(v);
-   //  })
-
-     
-   // })
-  
-
-
-  $("#btn_reset").click(function(){
-    
-      globals.clearThreads()
-
-
-    usr_inpt.style.visibility = 'visible'
-    rslt.style.visibility = 'hidden'
-  })
  
     $( "#slider" ).slider({
       value:140,

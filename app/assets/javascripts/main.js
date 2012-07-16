@@ -1,4 +1,15 @@
 
+     //global variables
+     globals = {
+        threads: [],
+        clearThreads: function() {
+          for(var i = 0; i < this.threads.length; i++)
+          {
+            window.clearTimeout(this.threads[i]);
+          }
+        }
+     };
+
      //remove some character from array
      Array.prototype.clean = function(deleteValue) {
         var newArray = new Array();

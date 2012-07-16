@@ -1,6 +1,19 @@
 <textarea id="user-input"><%= t :sample_text %></textarea>
-<div id="processing-result"></div>
-1. <input id="btn" type="button" value="<%= t :btn_rd %>">
-2. <input id="btn_reset" type="button" value="<%= t :btn_rld %>">
-<%= t :speed %>: <input name="speed" id="speed" type="text" size="4" value="160"> <%= t :dimension %>.
+
+<div id="processing-result">
+	<span></span>
 </div>
+
+<input id="btn" type="button" value="<%= t :btn_rd %>">
+
+<div style="display:inline-block;"><%= t :speed %>: 
+	<div>
+		<span id="speed" style="display:inline-block; width:16px; height:18px;">140</span> <%= t :dimension %>
+	</div>
+</div>
+
+<div style="display:inline-block; width:150px; margin-left:10px;" id="slider">
+</div>
+
+<!--  <input name="speed" id="speed" type="text" size="4" value="160"> <%= t :dimension %>. -->
+

@@ -2,8 +2,18 @@ Treeder::Application.routes.draw do
   get "home/index"
 
   scope '(:locale)' do
-    match '/' => 'home#index'
-    #resources :users
+    devise_for :users
+    
+    #devise_scope :user do
+    #  get "sign_up", :to => "devise/registrations#new"
+    #  get "sign_in", :to => "devise/sessions#new"
+    #  get "sign_out", :to => "devise/sessions#destroy"
+    #end
+    
+    resources :users
+    
+    #match '/' => 'home#index'    
+    
     root :to => 'home#index', :as => 'home'
   end
   

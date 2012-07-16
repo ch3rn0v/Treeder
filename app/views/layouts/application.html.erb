@@ -3,39 +3,70 @@
 <head>
   <title>Treeder</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= yield :stylesheets %>
+    <%= yield :stylesheets %>
   <%= javascript_include_tag "application" %>
-  <%= yield :javascripts %>
+    <%= yield :javascripts %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
+<div id="header">
+  <h1><%= t :title %></h1>  
+  <div id="site_description"><%= t :site_descr %></div>  
+</div>
 
-  <div id="wrapper">
-    <div id="header">
-      <h1><%= t :title %></h1>
-      <% if notice %>
-      <p id="notice"><%= notice %></p>
-      <% end %>
-      <div id="site_description"><%= t :site_descr %></div>
+<div id="service_messages">
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+  <% if request.fullpath != home_path %>
+    <%= t :return_to %> <%= link_to "#{ t :home_page }", home_path %>
+  <% end %>
+</div>
+
+<div id="main">
+  <div id="left_side">
+    <div id="account">
+      <h2><%= t :account %></h2>
+      <% if user_signed_in? %>
+      <p class="welcome"><%= t :welcome %>, <%= current_user.email %></p>
+      <%= link_to "#{ t :edit_acc }", edit_user_registration_path %>
+      <%= link_to "#{ t :sign_out}", destroy_user_session_path, :method => :delete %>
+      <% else %>
+      <%= link_to "#{ t :sign_in }", new_user_session_path %><br/>
+      <%= t :or %><br/>
+      <%= link_to "#{ t :sign_up }", new_user_registration_path %><br/>
+      <%= t :acc_usage %>.
+      <% end %>    
     </div>
-
-    <%= yield %>
-
-    <div id="footer">
-      <p>Treeder © 2012</p>
-      <div id="language_switcher">
-        <p>Choose your language</p>
-        <%= form_tag home_path, :class => 'locale' do %>
-        <%= select_tag 'set_locale',
-        options_for_select(LANGUAGES, I18n.locale.to_s),
-        :onchange => 'this.form.submit()' %>
-        <%= submit_tag 'Submit' %>
-        <%= javascript_tag "$('.locale input').hide()" %>  
-        <% end %>
-      </div>
+    
+    <div id="achievements">
+      <h2><%= t :achievements %></h2>
+      <p>/*Here will be information about the user's achievements, links to the text readed and so on.*/</p>
     </div>
   </div>
+  
+  <div id="main_container">    
+    <%= yield %>    
+  </div>
+</div>
+
+<div id="footer">  
+  <div id="language_switcher">
+  <p>Choose your language</p>
+  <%= form_tag home_path, :class => 'locale' do %>
+    <%= select_tag 'set_locale',
+     options_for_select(LANGUAGES, I18n.locale.to_s),
+     :onchange => 'this.form.submit()' %>
+    <%= submit_tag 'Submit' %>
+    <%= javascript_tag "$('.locale input').hide()" %>  
+  <% end %>
+  <br /><br /><p>Treeder © 2012</p>
+</div>
 
 </body>
 </html>

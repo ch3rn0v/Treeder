@@ -1,22 +1,20 @@
-<h1>Listing texts</h1>
-
-
+<h1><%= t :list_of_texts %></h1>
 
 <% @texts.each do |text| %>
-    <div style = "margin: 10px; background-color: #FAF7A8; border: 1px solid #E3E095">
-    <div><span><b>Author:</b></span><%= User.find(text.user_id).email %></div>
-    <div><span><b>Description:</b></span><%= text.description %></div>
-    <div><span><b>Content:</b></span><%= text.content %></div>
-     <% if current_user.id == text.user_id %>
-    <span><%= link_to 'Edit', edit_text_path(text) %></span>
-    <span><%= link_to 'Destroy', text, confirm: 'Are you sure?', method: :delete %></span>
+    <div id="text_descr">
+    <div><span><b><%= t :author %>:</b></span> <%= User.find(text.user_id).email %></div>
+    <div><span><b><%= t :description %>:</b></span> <%= text.description %></div>
+    <div><span><b><%= t :content %>:</b></span> <%= text.content %></div>
+    <br />
+    <% if current_user.id == text.user_id %>
+      <span><%= link_to "#{ t :edit }", edit_text_path(text) %></span>
+      <span><%= link_to "#{ t :destroy }", text, confirm: "#{ t :are_you_sure }", method: :delete %></span>
     <% end %>
-    <%= link_to 'Start reading fast', :controller => "reading", :action => "new", :id => text.id %>
+      <b><%= link_to "#{ t :btn_rd }", :controller => "reading", :action => "new", :id => text.id %></b>
     </div>
 
 <% end %>
-<!-- </table> -->
 
 <br />
 
-<%= link_to 'New Text', new_text_path %>
+<%= link_to "#{ t :new_text }", new_text_path %>

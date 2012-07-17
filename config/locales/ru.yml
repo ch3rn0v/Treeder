@@ -26,7 +26,6 @@ ru:
 
   actions: "Действия"
 
-  
   email: "Почта"
   password: "Пароль"
   password_confirmation: "Повторите пароль"
@@ -40,9 +39,24 @@ ru:
   
   unhappy: "Недовольны?"
   
+  statistics: "Статистика"
+  
+  submit: "Сохранить"
   update: "Обновить"
+  edit: "Изменить"
+  destroy: "Удалить"
   are_you_sure: "Вы уверены?"
   back: "Назад"
+  
+  text: "Текст"
+  length: "Длина"
+  new_text: "Добавить новый текст"
+  
+  author: "Author"
+  description: "Описание"
+  content: "Содержание"
+  
+  list_of_texts: "Список текстов"
   
   devise:
     sessions:

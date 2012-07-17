@@ -1,6 +1,5 @@
-<% unless  user_signed_in? %>
 
-<textarea id="user-input"><%= t :sample_text %></textarea>
+<textarea id="user-input"><%= @text.content %></textarea>
 
 <div id="processing-result">
 	<span></span>
@@ -8,8 +7,7 @@
 
 <input id="btn" type="button" value="<%= t :btn_rd %>" btnstart = "<%= t :btn_rd %>" btnstop = "<%= t :btn_rld %>">
 
-<div id="speed">
-	<%= t :speed %>:
+<div id="speed"><%= t :speed %>:
 	<div>
 		<span id="speed" style="display:inline-block; width:16px; height:18px;">140</span>  <%= t :dimension %>
 	</div>
@@ -17,12 +15,5 @@
 
 <div style="display:inline-block; width:150px; margin-left:10px;" id="slider">
 </div>
-<% else %>
-  <div><h2><%= current_user.email %></h2></div>
-  <div>Completed texts: 
-  	<% current_user.texts.each do |t| %>
-  	  <%= link_to t.description, t %><%= "," if t!=current_user.texts.last  %>
-  	<% end %>
-  </div>
-<% end %>
 
+<div><%= link_to "It was easy, isn't it?", {:controller => "reading", :action => "save", :user_id => current_user.id, :text_id => @text.id }, :class => 'view_results' %> </div>

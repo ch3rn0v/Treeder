@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @text.user_id %>
+</p>
+
+<p>
+<p>
+  <b>Description:</b>
+  <%= @text.description %>
+</p>
+  <b>Content:</b>
+  <%= @text.content %>
+</p>
+<div><%= link_to 'Start reading fast', :controller => "reading", :action => "new", :id => @text.id %></div>
+
+<%= link_to 'Edit', edit_text_path(@text) %> |
+<%= link_to 'Back', texts_path %>

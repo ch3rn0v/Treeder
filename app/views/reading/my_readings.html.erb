@@ -1,0 +1,8 @@
+<% @reading.each do |r| %>
+ <div style= "background-color: #FAF7A8; margin-bottom: 10px;">
+ 	<div><b></b><%= link_to r.text.description, r.text %></div>
+ 	<div><b>Text length: </b><%= r.text.content.length %></div>
+ 	<div><b>Speed: </b><%= r.speed %></div>
+ 	<!-- TODO: completeness(%), time -->
+ </div>
+<% end %>

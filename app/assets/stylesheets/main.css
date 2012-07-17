@@ -56,8 +56,7 @@ body {
   float: left;
 }
 
-#account,
-#achievements {
+.sidebars {
   background-color: #faf7a8;
   border: 1px solid #e3e095;
   margin: 20px 10px 20px 0;

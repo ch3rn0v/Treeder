@@ -31,7 +31,7 @@
 
 <div id="main">
   <div id="left_side">
-    <div id="account">
+    <div class="sidebars">
       <h2><%= t :account %></h2>
       <% if user_signed_in? %>
       <p class="welcome"><%= t :welcome %>, <%= current_user.email %></p>
@@ -44,8 +44,16 @@
       <%= t :acc_usage %>.
       <% end %>    
     </div>
-    
-    <div id="achievements">
+    <% if user_signed_in? %>
+    <div class="sidebars">
+      <h2><%= t :actions %></h2>
+      <div> <%= link_to "Add new text", new_text_path %> </div>    
+      <div> <%= link_to "View all texts", texts_path %> </div>    
+      <div> <%= link_to "View my readings", { :controller => "reading", :action => "my_readings"} %> </div>    
+    </div>
+    <% end %>
+
+    <div class="sidebars">
       <h2><%= t :achievements %></h2>
       <p>/*Here will be information about the user's achievements, links to the text readed and so on.*/</p>
     </div>

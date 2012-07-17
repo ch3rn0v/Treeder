@@ -23,6 +23,8 @@ en:
   sign_in: "Sign in"
   sign_out: "Sign out"
   
+  actions: "Actions"
+  
   email: "Email"
   password: "Password"
   password_confirmation: "Password confirmation"

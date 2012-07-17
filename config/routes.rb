@@ -1,4 +1,15 @@
 Treeder::Application.routes.draw do
+
+
+
+
+  match "reading/new" => "reading#new"
+  match "reading/save" => "reading#save"
+  match "reading/my_readings" => "reading#my_readings"
+  match "reading/:id" => "reading#show"
+
+  resources :texts
+
   get "home/index"
 
   scope '(:locale)' do
@@ -11,9 +22,7 @@ Treeder::Application.routes.draw do
     #end
     
     resources :users
-    
-    #match '/' => 'home#index'    
-    
+        
     root :to => 'home#index', :as => 'home'
   end
   

@@ -23,6 +23,9 @@ ru:
   sign_up: "Зарегистрироваться"
   sign_in: "Войти"
   sign_out: "Выйти"  
+
+  actions: "Действия"
+
   
   email: "Почта"
   password: "Пароль"

@@ -1,0 +1,22 @@
+<h1>Listing texts</h1>
+
+
+
+<% @texts.each do |text| %>
+    <div style = "margin: 10px; background-color: #FAF7A8; border: 1px solid #E3E095">
+    <div><span><b>Author:</b></span><%= User.find(text.user_id).email %></div>
+    <div><span><b>Description:</b></span><%= text.description %></div>
+    <div><span><b>Content:</b></span><%= text.content %></div>
+     <% if current_user.id == text.user_id %>
+    <span><%= link_to 'Edit', edit_text_path(text) %></span>
+    <span><%= link_to 'Destroy', text, confirm: 'Are you sure?', method: :delete %></span>
+    <% end %>
+    <%= link_to 'Start reading fast', :controller => "reading", :action => "new", :id => text.id %>
+    </div>
+
+<% end %>
+<!-- </table> -->
+
+<br />
+
+<%= link_to 'New Text', new_text_path %>

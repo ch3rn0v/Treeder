@@ -2,8 +2,14 @@ $(function(){
   var rslt = document.getElementById("processing-result")
   var usr_inpt = document.getElementById("user-input")        
   rslt.style.visibility = 'hidden'
+  var original_params = $('a.view_results').attr('href')
     
     $("#btn").click(function(){
+
+         //Параметры для дальнейшего get-запроса
+         var speed = $( "#slider" ).slider( "option", "value" );
+         $('a.view_results').attr('href', original_params + '&speed=' + speed)
+         
 
       globals.clearThreads()
 
@@ -22,7 +28,6 @@ $(function(){
         var content = $("textarea").remove_spaces().split(" ")
         var output_block = $("#processing-result")
                 
-        var speed = $( "#slider" ).slider( "option", "value" );
         //alert(document.getElementById("speed").value)
                 
         //Прячем форму ввода текста и показываем блок, где по очереди отображаются слова

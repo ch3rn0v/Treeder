@@ -38,9 +38,24 @@ en:
     
   unhappy: "Unhappy?"
   
+  statistics: "Statistics"
+  
+  submit: "Create"
   update: "Update"
+  edit: "Edit"
+  destroy: "Delete"
   are_you_sure: "Are you sure?"
   back: "Back"  
+  
+  text: "Text"
+  length: "Length"
+  new_text: "Add new text"
+  
+  author: "Author"
+  description: "Description"
+  content: "Content"
+  
+  list_of_texts: "List of texts"
   
   devise:
     sessions:

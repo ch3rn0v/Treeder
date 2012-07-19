@@ -10,7 +10,7 @@ $box-width: 678px;
 $box-height: 200px;
 
 #site_description {
-  font-size:26px;  
+  font-size: 26px;  
 }
 
 #user-input {
@@ -21,18 +21,17 @@ $box-height: 200px;
 }
 
 
-#processing-result {
-   /*width: $box-width;*/ 
-   height: $box-height / 2;
-   
-   padding: 30px;   
-   margin-top: -($box-height / 2 + 110px);
-   margin-bottom: ($box-height / 2);
-   border: 2px solid black;      
-   background-color: #F7F7F7;
-
-   text-align: center;   
-   font-size: 50px;
+#processing-result {  
+  height: $box-height / 2;
+ 
+  padding: 30px;   
+  margin-top: -($box-height / 2 + 110px);
+  margin-bottom: ($box-height / 2);
+  border: 2px solid black;      
+  background-color: #F7F7F7;
+  
+  text-align: center;   
+  font-size: 50px;
 }
 
 

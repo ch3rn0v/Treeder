@@ -1,22 +1,10 @@
+body {
+  font-family: 'Cuprum', sans-serif;
+}
 
-/*#header {
-  background-color: #F7F7F7;
-}*/
 #wrapper {
   width: 950px;
   margin: 0 auto;
-
-}
-
-
-#header,
-#footer {
-  margin-top: 50px;
-  /*border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;*/
-  border: 1px solid #999999;
-  background-color: #F7F7F7;
-  padding: 3px 15px 30px;
 }
 
 input,
@@ -24,7 +12,6 @@ textarea {
   font-family: 'Cuprum', sans-serif;
   font-size: 20px;  
 }
-
 
 #language_switcher p {
   display:inline;
@@ -39,16 +26,15 @@ h1, h2 {
 h3 {
   margin: 5px 0 3px;
 }
-body {
-  font-family: 'Cuprum', sans-serif;
-}
 
 #service_messages {
   margin-top: 10px;
 }
 
-#main {
-  height:450px;
+#text_descr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 5px 0 5px;
 }
 
 #left_side {
@@ -64,7 +50,7 @@ body {
 }
 
 #main_container {
-  width: 700px;
+  width: 718px;
   margin: 20px 0 10px 0;
   padding: 10px 10px 40px 10px;
   float: right;  
@@ -74,22 +60,13 @@ body {
 
 #header,
 #footer {
-  margin-top: 30px;
-  /*border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;*/
+  margin-top: 30px !important;
   border: 1px solid #cdccfe;
   background-color: #dbdaff;
   padding: 15px 15px 30px;
 }
-input,
-textarea {
-  font-family: 'Cuprum', sans-serif;
-  font-size: 20px;  
-}
 
-#language_switcher p {
-  display:inline;
-}
-.locale {
-  display:inline;
+#footer {
+  float: left;
+  width: 918px;
 }

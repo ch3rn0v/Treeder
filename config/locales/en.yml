@@ -7,9 +7,15 @@ en:
   btn_rld: "Stop"
   speed: "Speed"
   dimension: "milliseconds"
+  time: "Time"
+  completness: "Completness"
+  
   return_to: "Return to"
   home_page: "home page"
   welcome: "Welcome"
+  
+  completed_texts: "Texts readed"
+  what_next: "What next"
   
   account: "Account"  
   edit_acc: "Edit account"
@@ -38,9 +44,7 @@ en:
     
   unhappy: "Unhappy?"
   
-  statistics: "Statistics"
-  
-  submit: "Create"
+  submit: "Save"
   update: "Update"
   edit: "Edit"
   destroy: "Delete"
@@ -50,12 +54,14 @@ en:
   text: "Text"
   length: "Length"
   new_text: "Add new text"
+  edit_text: "Editing text"
   
   author: "Author"
   description: "Description"
   content: "Content"
   
   list_of_texts: "List of texts"
+  statistics: "Statistics"
   
   devise:
     sessions:

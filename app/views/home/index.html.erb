@@ -4,11 +4,11 @@
   
 <% else %>
   <div><h2><%= current_user.email %></h2></div>
-  <div>Completed texts: 
+  <div><%= t :completed_texts %>:
   	<% current_user.texts.each do |t| %>
   	  <%= link_to t.description, t %><%= "," if t!=current_user.texts.last  %>
   	<% end %>
   </div>
-  <p>What next?</p>
-  <div><%= link_to "Add new text", new_text_path %> <%= link_to "View all texts", texts_path %> <%= link_to "View my readings", { :controller => "reading", :action => "my_readings"} %></div> 
+  <p><%= t :what_next %>?</p>
+  <div><%= link_to "#{ t :new_text }", new_text_path %> <%= link_to "#{ t :list_of_texts }", texts_path %> <%= link_to "#{ t :statistics }", { :controller => "reading", :action => "my_readings"} %></div> 
 <% end %>

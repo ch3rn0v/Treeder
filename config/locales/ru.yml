@@ -8,9 +8,15 @@ ru:
   btn_rld: "Ввести новый текст"
   speed: "Скорость"
   dimension: "миллисекунд"
+  time: "Время"
+  completness: "Прочитано"
+  
   return_to: "Вернуться на"
   home_page: "главную"  
   welcome: "Добро пожаловать"
+  
+  completed_texts: "Прочитанные тексты"
+  what_next: "Что дальше"
   
   account: "Аккаунт"  
   edit_acc: "Настроить аккаунт"
@@ -39,8 +45,6 @@ ru:
   
   unhappy: "Недовольны?"
   
-  statistics: "Статистика"
-  
   submit: "Сохранить"
   update: "Обновить"
   edit: "Изменить"
@@ -51,12 +55,14 @@ ru:
   text: "Текст"
   length: "Длина"
   new_text: "Добавить новый текст"
+  edit_text: "Изменение текста"
   
   author: "Author"
   description: "Описание"
   content: "Содержание"
   
   list_of_texts: "Список текстов"
+  statistics: "Статистика"
   
   devise:
     sessions:

@@ -1,18 +1,12 @@
 <h1><%= t :statistics %></h1>
 <% @reading.each do |r| %>
-<<<<<<< HEAD
- <div style= "background-color: #FAF7A8; margin-bottom: 10px;">
- 	<div><b></b><%= link_to r.text.description, r.text %></div>
- 	<div><b>Text length: </b><%= r.text.content.length %></div>
- 	<div><b>Speed: </b><%= r.speed %></div>
- 	<div><b>Time: </b><%= r.time %></div>
- 	<div><b>Completness: </b><%= r.percentage %></div>
-=======
+
  <div id="text_descr">
- 	<div><b><%= t :text %>:</b> <%= link_to r.text.description, r.text %></div>
+ 	<div><b><%= t :text %>:</b> <%= link_to r.text.description, r.text %></div> 	
  	<div><b><%= t :length %>:</b> <%= r.text.content.length %></div>
  	<div><b><%= t :speed %>:</b> <%= r.speed %></div>
- 	<!-- TODO: completeness(%), time -->
->>>>>>> 2c0cd259a9eeb9634611cdd9b2e63acea6030c5f
+ 	
+ 	<div><b><%= t :time %>:</b> <%= r.time %></div>
+ 	<div><b><%= t :completness %>:</b> <%= r.percentage %>%</div>
  </div>
 <% end %>

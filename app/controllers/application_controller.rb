@@ -17,4 +17,16 @@ class ApplicationController < ActionController::Base
     def default_url_options
       { :locale => I18n.locale }
     end
+
+
+    def sec_to_date(seconds)
+      seconds = seconds.to_i
+
+       get_time = lambda do |op| 
+         res =  seconds.send(op, 60).to_s
+         '0' + res.to_s if res.length < 2
+       end
+
+      get_time.call('/') + ':' + get_time.call('%')
+    end
 end

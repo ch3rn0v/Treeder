@@ -4,9 +4,10 @@ class ReadingController < ApplicationController
   end
 
   def save
-  	reading = Reading.new(params.except(:locale, :controller, :action))
-  	if reading.save
-  	  redirect_to reading
+    params[:time] = sec_to_date(params[:time])
+  	@reading = Reading.new(params.except(:locale, :controller, :action))
+  	if @reading.save
+  	  redirect_to :action => 'my_readings'
   	end  	
   end
 

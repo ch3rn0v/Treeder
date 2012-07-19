@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717071614) do
+ActiveRecord::Schema.define(:version => 20120719130620) do
 
   create_table "readings", :force => true do |t|
     t.integer  "user_id"
     t.integer  "text_id"
     t.integer  "achievment_id"
     t.integer  "speed"
+    t.string   "time"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "percentage"
   end
 
   create_table "texts", :force => true do |t|

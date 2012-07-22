@@ -62,6 +62,21 @@ en:
   
   list_of_texts: "List of texts"
   statistics: "Statistics"
+
+
+  finish_text: "<span>
+    <div>
+      <b>Congratulations!</b>
+    </div>
+    <span>You have read <b id='percentage'></b>% of the text in <b id='time'></b> seconds with <b id='speed'></b> delay
+    </span>
+    </span>"
+
+  repeat: "Try again?"
+  save_score: "Save my score"
+  login_offer: " to save your score you"
+ 
+
   
   devise:
     sessions:

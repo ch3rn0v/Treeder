@@ -4,7 +4,7 @@
 	<span></span>
 </div>
 
-<input id="btn" type="button" value="<%= t :btn_rd %>" btnstart = "<%= t :btn_rd %>" btnstop = "<%= t :btn_rld %>" btnrepeat = "Repeat?">
+<input id="btn" type="button" value="<%= t :btn_rd %>" btnstart = "<%= t :btn_rd %>" btnstop = "<%= t :btn_rld %>" btnrepeat = "<%= t('repeat') %>" >
 
 <div id="speed">
 	<%= t :speed %>:
@@ -16,17 +16,15 @@
 <div style="display:inline-block; width:150px; margin-left:10px;" id="slider">
 </div>
  
-<div id="finish_links" style="display:none;">
-	<div>
+<div id="finish_text" style="display:none;">
+		<%= raw t('finish_text') %>
 	<% if user_signed_in? %>
-	  <%= link_to "Save my score", {:controller => "reading", :action => "save", :user_id => current_user.id, :text_id => @text.id }, :class => 'view_results' %>  
-	<% else %> 
-	<span> You can
-	  <%= link_to "Sign in", new_user_session_path %> 
-	    or 
-	  <%= link_to "Register", new_user_registration_path %> 
-	    to save your scores
-    </span>
+	  <%= link_to t('save_score'), {:controller => "reading", :action => "save", :user_id => current_user.id, :text_id => @text.id }, :class => 'view_results' %>  
+	<% else %>
+	<div> 
+	  <%= link_to t('sign_in'), new_user_session_path %> |
+	  <%= link_to t('sign_up'), new_user_registration_path %> 
+	  <%= t('login_offer')  %>
     <% end %>
-   </div>
+    </div>
 </div>

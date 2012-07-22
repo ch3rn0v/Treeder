@@ -7,9 +7,12 @@ $(function(){
    $('#btn').addClass('repeat-btn').val($('#btn').attr('btnrepeat'))
    
    $('a.view_results').attr('href', original_params + '&speed=' + speed + '&time=' + Timer.seconds + '&percentage=' + percentage)
-   return "<div><b>Congratulations!</b></div> <span>You have read <b>" + percentage + "</b>% of the text in <b>"
-           + time + "</b> seconds with <b>" + speed
-           + "</b> delay</span> " + $('#finish_links').html()
+  
+    $('#percentage').html(percentage)
+    $('#speed').html(speed)
+    $('#time').html(time)
+
+   return $('#finish_text').html()
   }
 
   var rslt = document.getElementById("processing-result")

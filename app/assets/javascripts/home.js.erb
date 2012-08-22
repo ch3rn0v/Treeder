@@ -22,9 +22,9 @@ $(function(){
 
   $("#btn").click(function(){
 
-         var word_wrapper = $('#processing-result').children().first()
+         var word_wrapper = $('#processing-result').children().first(),
          //Параметры для посылки дальнейшего get-запроса
-         var speed = $( "#slider" ).slider( "option", "value" );
+          speed = $( "#slider" ).slider( "option", "value" );
          //Начинаем отсчитывать время чтения
          //Очищаем всю запущенную анимацию, если есть
          globals.clearThreads()

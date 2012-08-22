@@ -1,3 +1,12 @@
+<%if !current_user.achievements.empty? %>
+  <div>My achievements:</div>
+  <% current_user.achievements.each do |a| %>
+    <div><%= a.name %></div>
+    <div><%= a.description %></div>
+    <hr>
+  <% end %>
+<% end %>
+
 <h1><%= t :statistics %></h1>
 <% @reading.each do |r| %>
 

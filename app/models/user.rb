@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
   
   has_many :readings
   has_many :texts, :through => :readings
+
+  has_many :attained_achievements 
+  has_many :achievements, :through => :attained_achievements
 end

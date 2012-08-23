@@ -1,21 +1,38 @@
-<%if !current_user.achievements.empty? %>
-  <div>My achievements:</div>
-  <% current_user.achievements.each do |a| %>
-    <div><%= a.name %></div>
-    <div><%= a.description %></div>
-    <hr>
-  <% end %>
-<% end %>
+<% if user_signed_in? %>
+	<% content_for :javascripts do %>
+	  <%= javascript_include_tag :achievements -%>
+	<% end %>
 
-<h1><%= t :statistics %></h1>
-<% @reading.each do |r| %>
-
- <div id="text_descr">
- 	<div><b><%= t :text %>:</b> <%= link_to r.text.description, r.text %></div> 	
- 	<div><b><%= t :length %>:</b> <%= r.text.content.length %></div>
- 	<div><b><%= t :speed %>:</b> <%= r.speed %></div>
- 	
- 	<div><b><%= t :time %>:</b> <%= r.time %></div>
- 	<div><b><%= t :completness %>:</b> <%= r.percentage %>%</div>
- </div>
+	<%if !current_user.achievements.empty? %>
+	<div>
+	  <h1><%= t "achievements.this" %></h1>
+	  <% current_user.achievements.each do |a| %>
+	  <div class="achievement">
+	    <a href="#" ><div><%= image_tag (a.picture_url || 'Achievement_icon.png') %></div>
+	      <div><b><%= t 'achievements.' + a.name %></b></div>
+	    </a>
+	    <div class="ach_desc"><%= t("achievements." + a.name + "_desc") %></div>
+	  </div>
+	  <% end %>
+	</div>
+	<% end %>
+    
+    <div style="clear:both; margin-top:100px;">
+		<h1><%= t :statistics %></h1>
+		<% @reading.each do |r| %>
+		 <div id="text_descr">
+		 	<div><b><%= t :text %>:</b> <%= link_to r.text.description, r.text %></div> 	
+		 	<div><b><%= t :length %>:</b> <%= r.text.content.length %></div>
+		 	<div><b><%= t :speed %>:</b> <%= r.speed %></div>
+		 	
+		 	<div><b><%= t :time %>:</b> <%= r.time %></div>
+		 	<div><b><%= t :completness %>:</b> <%= r.percentage %>%</div>
+		 </div>
+		<% end %>
+    </div>
+<% else %>
+	<% content_for :javascripts do %>
+	  <%= javascript_include_tag :reading -%>
+	<% end %>
+  <%= render "shared/reading_block" %>
 <% end %>

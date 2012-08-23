@@ -3,8 +3,7 @@
 <head>
   <title>Treeder</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= yield :stylesheets %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :application -%>
     <%= yield :javascripts %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -35,7 +34,6 @@
           <h2><%= t :account %></h2>
           <% if user_signed_in? %>
           <p class="welcome"><%= t :welcome %>, <%= current_user.email %></p>
-          <%= link_to "#{ t :edit_acc }", edit_user_registration_path %>
           <%= link_to "#{ t :sign_out}", destroy_user_session_path, :method => :delete %>
           <% else %>
           <%= link_to "#{ t :sign_in }", new_user_session_path %><br/>
@@ -53,10 +51,11 @@
         </div>
         <% end %>
     
-        <div class="sidebars">
+ <!--        <div class="sidebars">
           <h2><%= t :achievements %></h2>
           <p>/*Here will be information about the user's achievements, links to the text readed and so on.*/</p>
-        </div>
+        </div> -->
+
       </div>
       
       <div id="main_container">    

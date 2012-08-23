@@ -1,1 +1,5 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag :reading -%>
+<% end %>
+
 <%= render :partial => "shared/reading_block", :locals => { :text => @text} %>

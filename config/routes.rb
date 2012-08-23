@@ -23,7 +23,7 @@ Treeder::Application.routes.draw do
     
     resources :users
         
-    root :to => 'home#index', :as => 'home'
+    root :to => 'reading#my_readings', :as => 'home'
   end
   
   # The priority is based upon order of creation:

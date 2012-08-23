@@ -21,7 +21,6 @@ en:
   edit_acc: "Edit account"
   cancel_acc: "Cancel my account"
   
-  achievements: "Achievements"
   or: "or"
   acc_usage: "to save your texts, get achievements and more"
   
@@ -75,9 +74,13 @@ en:
   repeat: "Try again?"
   save_score: "Save my score"
   login_offer: " to save your score you"
- 
 
-  
+
+  achievements:
+    this: "Achievements"
+    persistent_reader: "Persistent reader"
+    persistent_reader_desc: "Congratulations! You have read n texts. Carry on with your reading."
+
   devise:
     sessions:
       user:

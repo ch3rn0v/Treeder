@@ -8,8 +8,8 @@ class ReadingObserver < ActiveRecord::Observer
 			   }
 
 	    validators = 
-	    { persistent_reader: proc { true if data[:user].readings.length >= 0 },
-	      fast_reader:       proc { true if data[:user].readings.find_all{|r| r.speed > 180}.length >= 10 }
+	    { persistent_reader: proc { true if data[:user].readings.length >= 1 }, # Если кол-во чтений больше N
+	      fast_reader:       proc { true if data[:user].readings.find_all{|r| r.speed > 180}.length >= 10 } # Если кол-во прочитанных текстов на скорости > 180 больше 10
 	    }
 
 	    Achievement.all.each do |ach| 

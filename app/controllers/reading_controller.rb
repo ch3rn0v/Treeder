@@ -1,4 +1,5 @@
 class ReadingController < ApplicationController
+  before_filter {|c| }
   def new
   	@text = Text.find(params[:id])
   end
@@ -16,6 +17,6 @@ class ReadingController < ApplicationController
   end
 
   def my_readings
-  	@reading = current_user.readings
+  	  @reading = current_user.readings if current_user
   end
 end

@@ -23,46 +23,44 @@
       <% if alert %>
         <p class="alert"><%= alert %></p>
       <% end %>
-      <% if request.fullpath != home_path %>
+      <!-- <% if request.fullpath != home_path || home_path + "/ru" %>
         <%= t :return_to %> <%= link_to "#{ t :home_page }", home_path %>
-      <% end %>
+      <% end %> -->
     </div>
-  
-    <!--<div id="main">-->
-      <div id="left_side">
-        <div class="sidebars">
-          <h2><%= t :account %></h2>
-          <% if user_signed_in? %>
-          <p class="welcome"><%= t :welcome %>, <%= current_user.email %></p>
-          <%= link_to "#{ t :sign_out}", destroy_user_session_path, :method => :delete %>
-          <% else %>
-          <%= link_to "#{ t :sign_in }", new_user_session_path %><br/>
-          <%= t :or %><br/>
-          <%= link_to "#{ t :sign_up }", new_user_registration_path %><br/>
-          <%= t :acc_usage %>.
-          <% end %>    
-        </div>
-        <% if user_signed_in? %>
-        <div class="sidebars">
-          <h2><%= t :actions %></h2>
-          <div> <%= link_to "#{ t :new_text }", new_text_path %> </div>    
-          <div> <%= link_to "#{ t :list_of_texts }", texts_path %> </div>    
-          <div> <%= link_to "#{ t :statistics }", { :controller => "reading", :action => "my_readings"} %> </div>    
-        </div>
-        <% end %>
     
- <!--        <div class="sidebars">
-          <h2><%= t :achievements %></h2>
-          <p>/*Here will be information about the user's achievements, links to the text readed and so on.*/</p>
-        </div> -->
-
+    <div id="left_side">
+      <div class="sidebars">
+        <h2><%= t :account %></h2>
+        <% if user_signed_in? %>
+        <p class="welcome"><%= t :welcome %>, <%= current_user.email %></p>
+        <%= link_to "#{ t :sign_out}", destroy_user_session_path, :method => :delete %>
+        <% else %>
+        <%= link_to "#{ t :sign_in }", new_user_session_path %><br/>
+        <%= t :or %><br/>
+        <%= link_to "#{ t :sign_up }", new_user_registration_path %><br/>
+        <%= t :acc_usage %>.
+        <% end %>    
       </div>
-      
-      <div id="main_container">    
-        <%= yield %>    
+      <% if user_signed_in? %>
+      <div class="sidebars">
+        <h2><%= t :actions %></h2>
+        <div> <%= link_to "#{ t :new_text }", new_text_path %> </div>    
+        <div> <%= link_to "#{ t :list_of_texts }", texts_path %> </div>    
+        <div> <%= link_to "#{ t :statistics }", { :controller => "reading", :action => "my_readings"} %> </div>    
       </div>
-    <!--</div>-->
+      <% end %>
   
+<!--        <div class="sidebars">
+        <h2><%= t :achievements %></h2>
+        <p>/*Here will be information about the user's achievements, links to the text readed and so on.*/</p>
+      </div> -->
+
+    </div>
+    
+    <div id="main_container">    
+      <%= yield %>    
+    </div>
+      
     <div id="footer">  
       <div id="language_switcher">
       <p>Choose your language</p>

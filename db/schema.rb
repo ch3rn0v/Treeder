@@ -11,10 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120823100119) do
+ActiveRecord::Schema.define(:version => 20120822101115) do
 
   create_table "achievements", :force => true do |t|
     t.string   "name"
+    t.text     "description"
     t.string   "picture_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -36,14 +37,6 @@ ActiveRecord::Schema.define(:version => 20120823100119) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "percentage"
-  end
-
-  create_table "texts", :force => true do |t|
-    t.text     "content"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
